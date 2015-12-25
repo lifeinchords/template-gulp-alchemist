@@ -1,0 +1,47 @@
+/* 
+    LOST grid system: https://github.com/corysimmons/lost 
+*/
+
+/* override defaults */
+@lost flexbox flex;
+@lost gutter 1em;
+
+
+/* for debugging/ showing grid*/
+body { 
+  /*lost-utility: edit;*/
+}
+
+section {
+
+  /* postCss properties */
+  
+  /*lost-flex-container: row;  use this, or specify lost-center, 
+  which lost auto mixes in this property */
+  lost-center: 100% 0;
+}
+
+.box {
+  background: #DDD;
+  height: 10em;
+
+  /* postCss */
+  lost-column: 1/4;
+}
+
+
+
+
+
+.pl__nav {
+  height: 30em;
+  background: #ddd;
+
+  lost-center: 100% 0;
+
+}
+
+
+.pl__component {
+  lost-column: 1/3;
+}

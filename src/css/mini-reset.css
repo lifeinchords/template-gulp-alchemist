@@ -1,0 +1,115 @@
+/* 
+  scaled down version of resetting styles, with responsive in mind
+  using this instead of normalize for now
+
+  this is still pre-grid or CSS framework
+*/
+
+
+*, 
+*:after, 
+*:before { 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+
+    /*// global style, so we can use ems*/
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /*// overflow: hidden;*/
+  overflow-y: scroll; /* force scroll to appear */
+  width: 100%;
+}
+
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover, 
+a:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+strong {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  /*color: $color-strong;*/
+
+  /*// compensating for differences in type compared to paragraph text in a diff typeface*/
+  font-size: 0.725rem; 
+}
+
+img { width: 100%; }
+
+video { 
+  width:100%;
+  height: auto !important;
+}
+
+/*.svg {
+  height: auto !important;
+}*/
+
+svg { 
+/*  width: 0;
+  height: 0;*/
+  position: absolute;
+}
+
+ul {
+  list-style: none;
+  padding:0;
+  margin:0;
+
+  li { 
+    padding-left: 1em; 
+    text-indent: -.7em;
+  }
+}
+
+ul.with-dashes {
+  li:before {
+      content: "-";
+      color: $color-red;
+      padding: 0 1em;
+      font-size: 1em;
+  }
+}
+
+
+.embed-container { 
+  position: relative; 
+
+ /* responsive trick for fluid scaling: 
+  https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php; */
+
+  padding-bottom: 56.25%; 
+  height: 0; 
+  overflow: hidden; 
+  max-width: 100%; 
+  cursor: pointer;
+}
+
+.embed-container iframe, 
+.embed-container object, 
+.embed-container embed { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  cursor: pointer;
+}
