@@ -1,18 +1,23 @@
-# get latest node
-nvm install stable
+#### get latest node
+`nvm install stable`
 
-# update this stable node version into `.node-version`
 
-# start with Gulp + PostCSS
-https://github.com/azat-io/generator-alchemist#readme
+#### update this stable node version into `.node-version`
 
-# set up LostCss
-npm install --save-dev gulp gulp-postcss gulp-sourcemaps autoprefixer lost
+
+#### start with Gulp + PostCSS
+`https://github.com/azat-io/generator-alchemist#readme`
+
+
+#### set up LostCss
+`npm install --save-dev gulp gulp-postcss gulp-sourcemaps autoprefixer lost`
+
 
 <!-- npm install postcss-use --save -->
 
-# run
-gulp
+#### run
+`gulp`
+
 
 
 GRID
