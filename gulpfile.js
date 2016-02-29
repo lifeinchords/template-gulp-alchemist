@@ -17,7 +17,7 @@ var px2Rem = require('postcss-pxtorem');
 var responsiveImages = require('postcss-responsive-images');
 var short = require ('postcss-short');
 var size = require('postcss-size');
-var uglify = require('gulp-uglify');
+// var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
 
 var sourcemaps = require('gulp-sourcemaps');
@@ -80,7 +80,7 @@ gulp.task('postcss', function () {
 
 gulp.task('js', function () {
   return gulp.src('src/js/*')
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.stream());
 });
